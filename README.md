@@ -26,8 +26,13 @@ Analytic framework that fuses facial micro-expression detection with speech tran
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+
+# Command-line interface
 python app.py --source 0              # webcam
 python app.py --source ./sample.mp4   # recorded file
+
+# GUI application
+python gui_app.py                      # launch GUI
 ```
 
 Model weights download on first run (~300 MB); subsequent runs are offline.
