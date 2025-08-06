@@ -4,7 +4,19 @@ Launcher script for CI Microexpression Tracking GUI
 """
 import sys
 import os
-from pathlib import Path
+
+# Handle pathlib import with fallback for corrupted environments
+try:
+    from pathlib import Path
+except ImportError as e:
+    print("❌ Critical Python environment error:")
+    print(f"   Cannot import pathlib: {e}")
+    print("   This indicates a corrupted Python installation")
+    print("   Solutions:")
+    print("   1. Check for conflicting pathlib.py files in project directory")
+    print("   2. Reinstall Python or create fresh virtual environment")
+    print("   3. Run: pip install -r requirements.txt")
+    sys.exit(1)
 
 def main():
     """Launch the CI Tracking GUI application"""

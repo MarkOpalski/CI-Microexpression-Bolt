@@ -441,18 +441,26 @@ Examples:
     if args.setup_git_hooks:
         print("🔧 Setting up git hooks for local development...")
         try:
+            # Check if os.chmod is available in this environment
+            if not hasattr(os, 'chmod'):
+                print("⚠️  Warning: os.chmod not available in this Python environment")
+                print("   This indicates a corrupted or limited Python installation")
+                print("   Git hooks will be configured but permissions must be set manually")
+            
             import subprocess
             subprocess.run(['git', 'config', 'core.hooksPath', '.githooks'], check=True)
             
             # Only run chmod on Unix-like systems
-            if sys.platform != 'win32':
+            if sys.platform != 'win32' and hasattr(os, 'chmod'):
                 subprocess.run(['chmod', '+x', '.githooks/pre-push'], check=True)
                 print("✅ Git hooks configured successfully")
             else:
-                print("✅ Git hooks configured (chmod skipped on Windows)")
+                if sys.platform == 'win32':
+                    print("✅ Git hooks configured (chmod skipped on Windows)")
+                else:
+                    print("✅ Git hooks configured (chmod skipped - environment limitation)")
                 print("   - Manually set executable permissions if needed")
             
-            print("✅ Git hooks configured successfully")
             print("   - Pre-push hook will prevent accidental GitHub pushes")
             print("   - Use 'git config --unset core.hooksPath' to disable")
         except subprocess.CalledProcessError as e:
