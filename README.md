@@ -77,6 +77,24 @@ python gui_app.py
 - `Ctrl+Q`: Quit Application
 - `F1`: Show Help
 
+## Installation and Setup
+
+This is a desktop Python application for counter-intelligence analysis. It is not a web application and cannot be deployed to web hosting services.
+
+### System Requirements
+- Python 3.8 or higher
+- OpenCV-compatible system
+- Sufficient RAM for AI model processing (~2GB recommended)
+- Local storage for model weights (~1GB)
+
+### Installation Steps
+1. Clone or download the project files
+2. Create a Python virtual environment
+3. Install dependencies from requirements.txt
+4. Run the application locally using Python
+
+### Security Note
+This system is designed for air-gapped operation in secure environments. All processing occurs locally with no external network dependencies after initial model download.
 ## Roadmap
 * Subject baseline profiling
 * GPU acceleration toggle
