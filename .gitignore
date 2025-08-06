@@ -1,0 +1,27 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.so
+*.dylib
+
+# Virtual environments
+env/
+venv/
+.venv/
+
+# IDE / editor settings
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Output & logs
+output/
+*.log
+
+# Model weights / large binaries
+models/**/*.pt
+models/**/*.pth
+
+# OS & Bolt.new artefacts
+*.bak
