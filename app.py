@@ -4,6 +4,7 @@ Main application for CI Microexpression Tracking System
 import argparse
 import sys
 import time
+import os
 from pathlib import Path
 from typing import Optional, Dict, Any
 import uuid
@@ -442,7 +443,15 @@ Examples:
         try:
             import subprocess
             subprocess.run(['git', 'config', 'core.hooksPath', '.githooks'], check=True)
-            subprocess.run(['chmod', '+x', '.githooks/pre-push'], check=True)
+            
+            # Only run chmod on Unix-like systems
+            if sys.platform != 'win32':
+                subprocess.run(['chmod', '+x', '.githooks/pre-push'], check=True)
+                print("✅ Git hooks configured successfully")
+            else:
+                print("✅ Git hooks configured (chmod skipped on Windows)")
+                print("   - Manually set executable permissions if needed")
+            
             print("✅ Git hooks configured successfully")
             print("   - Pre-push hook will prevent accidental GitHub pushes")
             print("   - Use 'git config --unset core.hooksPath' to disable")
