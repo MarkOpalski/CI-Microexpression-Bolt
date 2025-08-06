@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CI Microexpression Tracking System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1rem 2rem;
+            border-bottom: 2px solid #ffd700;
+        }
+        
+        .classification {
+            background: #ff6b35;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-align: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            flex: 1;
+        }
+        
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .feature-card h3 {
+            color: #ffd700;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .download-section {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: #ffd700;
+            color: #1e3c72;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 0.5rem;
+            transition: transform 0.2s;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .tech-specs {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .spec-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            border-radius: 5px;
+            border-left: 3px solid #ffd700;
+        }
+        
+        .footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 1rem 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .warning {
+            background: rgba(255, 107, 53, 0.2);
+            border: 1px solid #ff6b35;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+        }
+        
+        .warning h4 {
+            color: #ff6b35;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="classification">
+        CLASSIFICATION: FOR OFFICIAL USE ONLY
+    </div>
+    
+    <header class="header">
+        <h2>CI Microexpression Tracking System</h2>
+        <p>Advanced Behavioral Analysis Platform</p>
+    </header>
+    
+    <main class="container">
+        <section class="hero">
+            <h1>🔒 CI Microexpression Tracking</h1>
+            <p>Professional-grade facial micro-expression analysis and speech transcription system for counter-intelligence operations</p>
+        </section>
+        
+        <div class="warning">
+            <h4>⚠️ Security Notice</h4>
+            <p>This is a desktop application designed for air-gapped environments. Download and install locally on authorized systems only.</p>
+        </div>
+        
+        <section class="features">
+            <div class="feature-card">
+                <h3>🎥 Advanced Video Analysis</h3>
+                <p>MTCNN face detection with DeepFace emotion recognition. Supports webcam, video files, and RTSP streams with real-time processing.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🎤 Speech Transcription</h3>
+                <p>OpenAI Whisper integration for accurate speech-to-text with temporal alignment to facial expressions for behavioral analysis.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🔍 Mismatch Detection</h3>
+                <p>Automated detection of speech-emotion inconsistencies with severity scoring and confidence metrics for analyst review.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>📊 Professional Reports</h3>
+                <p>Comprehensive PDF reports with visualizations, chain of custody, and executive summaries for operational use.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🛡️ Security Compliant</h3>
+                <p>Air-gapped operation, tamper-evident audit logging, metadata stripping, and complete local processing.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>♿ Accessible Interface</h3>
+                <p>ARIA-compliant GUI with keyboard navigation, screen reader support, and professional styling for operational environments.</p>
+            </div>
+        </section>
+        
+        <section class="download-section">
+            <h2>Download & Installation</h2>
+            <p>This system requires local installation on authorized workstations</p>
+            
+            <div style="margin: 2rem 0;">
+                <a href="#" class="download-btn" onclick="showInstallInstructions()">📥 Installation Guide</a>
+                <a href="#" class="download-btn" onclick="showSystemRequirements()">💻 System Requirements</a>
+            </div>
+            
+            <div class="tech-specs">
+                <div class="spec-item">
+                    <strong>Python 3.8+</strong><br>
+                    Required runtime environment
+                </div>
+                <div class="spec-item">
+                    <strong>~2GB RAM</strong><br>
+                    For AI model processing
+                </div>
+                <div class="spec-item">
+                    <strong>~1GB Storage</strong><br>
+                    Model weights and cache
+                </div>
+                <div class="spec-item">
+                    <strong>OpenCV Compatible</strong><br>
+                    Video processing support
+                </div>
+            </div>
+        </section>
+        
+        <section id="install-instructions" style="display: none; margin-top: 2rem;">
+            <div class="feature-card">
+                <h3>Installation Instructions</h3>
+                <pre style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 5px; text-align: left; overflow-x: auto;">
+# 1. Clone or download the project files
+# 2. Create Python virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Run the application
+python launch_gui.py  # GUI interface
+python app.py --help  # CLI interface
+
+# 5. First run will download AI models (~300MB)
+                </pre>
+            </div>
+        </section>
+        
+        <section id="system-requirements" style="display: none; margin-top: 2rem;">
+            <div class="feature-card">
+                <h3>System Requirements</h3>
+                <ul style="text-align: left; line-height: 1.8;">
+                    <li><strong>Operating System:</strong> Windows 10+, macOS 10.14+, Linux (Ubuntu 18.04+)</li>
+                    <li><strong>Python:</strong> 3.8 or higher</li>
+                    <li><strong>Memory:</strong> 4GB RAM minimum, 8GB recommended</li>
+                    <li><strong>Storage:</strong> 2GB free space for models and processing</li>
+                    <li><strong>Graphics:</strong> OpenCV-compatible display adapter</li>
+                    <li><strong>Camera:</strong> USB webcam or integrated camera (optional)</li>
+                    <li><strong>Network:</strong> Internet connection for initial model download only</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <p>CI Microexpression Tracking System v1.0 | Secure Mode | For Official Use Only</p>
+    </footer>
+    
+    <script>
+        function showInstallInstructions() {
+            const section = document.getElementById('install-instructions');
+            const reqSection = document.getElementById('system-requirements');
+            section.style.display = section.style.display === 'none' ? 'block' : 'none';
+            reqSection.style.display = 'none';
+        }
+        
+        function showSystemRequirements() {
+            const section = document.getElementById('system-requirements');
+            const instSection = document.getElementById('install-instructions');
+            section.style.display = section.style.display === 'none' ? 'block' : 'none';
+            instSection.style.display = 'none';
+        }
+        
+        // Add some interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.feature-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.transition = 'transform 0.3s ease';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
