@@ -31,11 +31,51 @@ pip install -r requirements.txt
 python app.py --source 0              # webcam
 python app.py --source ./sample.mp4   # recorded file
 
-# GUI application
-python gui_app.py                      # launch GUI
+# GUI applications
+python gui_app.py                      # launch GUI directly
+python launch_gui.py                   # launch with error checking
 ```
 
 Model weights download on first run (~300 MB); subsequent runs are offline.
+
+## User Interfaces
+
+### Command Line Interface (CLI)
+```bash
+# Basic analysis
+python app.py --source video.mp4 --user analyst1
+
+# Webcam analysis
+python app.py --source 0 --user analyst2
+
+# System verification
+python app.py --verify-audit
+python app.py --setup-git-hooks
+```
+
+### Graphical User Interface (GUI)
+```bash
+# Launch GUI with error checking
+python launch_gui.py
+
+# Direct launch
+python gui_app.py
+```
+
+**GUI Features:**
+- Real-time video analysis with live preview
+- Professional tabbed interface (Analysis/Results/Settings)
+- Accessibility support with keyboard navigation
+- Integrated audit log verification
+- Session management and results browsing
+- ARIA-compliant landmark regions for screen readers
+
+**Keyboard Shortcuts:**
+- `Ctrl+N`: New Analysis
+- `Ctrl+O`: Load Video File
+- `Ctrl+S`: Start Analysis
+- `Ctrl+Q`: Quit Application
+- `F1`: Show Help
 
 ## Roadmap
 * Subject baseline profiling
