@@ -428,7 +428,32 @@ Examples:
         help='Verify audit log integrity and exit'
     )
     
+    parser.add_argument(
+        '--setup-git-hooks',
+        action='store_true',
+        help='Setup git hooks for local development'
+    )
+    
     args = parser.parse_args()
+    
+    # Handle git hooks setup
+    if args.setup_git_hooks:
+        print("🔧 Setting up git hooks for local development...")
+        try:
+            import subprocess
+            subprocess.run(['git', 'config', 'core.hooksPath', '.githooks'], check=True)
+            subprocess.run(['chmod', '+x', '.githooks/pre-push'], check=True)
+            print("✅ Git hooks configured successfully")
+            print("   - Pre-push hook will prevent accidental GitHub pushes")
+            print("   - Use 'git config --unset core.hooksPath' to disable")
+        except subprocess.CalledProcessError as e:
+            print(f"❌ Git hooks setup failed: {e}")
+            print("   This is normal in environments without Git")
+        except FileNotFoundError:
+            print("❌ Git not found - hooks setup skipped")
+            print("   Run this command manually in your local environment:")
+            print("   git config core.hooksPath .githooks && chmod +x .githooks/pre-push")
+        return 0
     
     # Handle audit verification
     if args.verify_audit:
