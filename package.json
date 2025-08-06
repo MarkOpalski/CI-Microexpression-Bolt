@@ -4,13 +4,14 @@
   "description": "Web interface for CI Microexpression Tracking System",
   "main": "index.html",
   "scripts": {
-    "build": "mkdir -p dist && cp index.html dist/ && echo 'Build complete'",
-    "start": "python -m http.server 8000",
-    "dev": "python -m http.server 8000"
+    "build": "mkdir -p dist && cp index.html dist/",
+    "start": "node server.js",
+    "dev": "node server.js"
   },
   "keywords": ["ci", "microexpression", "analysis", "security"],
   "author": "CI Analysis Team",
   "license": "RESTRICTED",
-  "devDependencies": {},
-  "dependencies": {}
+  "dependencies": {
+    "http": "0.0.1-security"
+  }
 }
