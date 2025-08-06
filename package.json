@@ -1,0 +1,13 @@
+{
+  "name": "ci-microexpression-tracking-web",
+  "version": "1.0.0",
+  "description": "Web interface for CI Microexpression Tracking System",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Static site - no build required'",
+    "start": "echo 'Static site - serve index.html'"
+  },
+  "keywords": ["ci", "microexpression", "analysis", "security"],
+  "author": "CI Analysis Team",
+  "license": "RESTRICTED"
+}
